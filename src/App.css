@@ -1,0 +1,114 @@
+/* Background themes */
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.dark {
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.light {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+/* Calculator glass box */
+.calculator {
+  width: 360px;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  color: white;
+}
+
+/* Display */
+.display {
+  width: 100%;
+  height: 65px;
+  font-size: 26px;
+  padding: 10px;
+  margin-bottom: 18px;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Buttons */
+.buttons, .sci-buttons {
+  display: grid;
+  gap: 12px;
+}
+
+.buttons {
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 10px;
+}
+
+.sci-buttons {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  background: rgba(255,255,255,0.2);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.35);
+}
+
+/* Special buttons */
+.clear {
+  background: #ff4757;
+}
+
+.del {
+  background: #ffa502;
+}
+
+.equal {
+  background: #2ed573;
+}
+
+/* Toggle button */
+.toggle-btn {
+  margin-bottom: 12px;
+  padding: 10px 15px;
+  border: none;
+  background: rgba(255,255,255,0.25);
+  color: white;
+  font-size: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background: rgba(255,255,255,0.45);
+}
+
+/* Mobile responsive */
+@media (max-width: 420px) {
+  .calculator {
+    width: 90%;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
